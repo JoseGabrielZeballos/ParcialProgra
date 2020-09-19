@@ -12,5 +12,7 @@ namespace Parcial1.Models
         {
 
         }
+
+        public System.Data.Entity.DbSet<Parcial1.Models.Country> Countries { get; set; }
     }
 }

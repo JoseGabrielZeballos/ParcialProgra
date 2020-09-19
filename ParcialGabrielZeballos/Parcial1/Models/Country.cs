@@ -6,12 +6,12 @@ using System.Web;
 
 namespace Parcial1.Models
 {
-    public enum languages
+    public enum CategoryType
     {
-       español
-
-
-
+         es = 1,
+         spa = 2,
+        Spanish = 3,
+        Español = 4,
     }
 
 
@@ -29,18 +29,15 @@ namespace Parcial1.Models
         [Display(Name ="Colocar el area del pais")]
 
         public float area { get; set; }
-        [Display(Name ="Colocar el numero de llamada de su pais")]
-        [Range(4,1)]
-
-        public int callingCodes { get; set; }
-
-
-
         
-        public languages? languages { get; set; }
+        [Display(Name ="Colocar el numero de llamada de su pais")]
+        
+        public int callingCodes { get; set; }
+        [Required]
+        public CategoryType languages { get; set; }
         [Url]
         [Display(Name = "Imagen de su bandera" )]
-        public int flag { get; set; }
+        public string flag { get; set; }
 
 
     }
